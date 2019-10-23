@@ -1,9 +1,6 @@
+
 # Modding-Requests
 Modding requests that I have for Paradox to make it possible to create better mods
-
-
-
-
 
 
 
@@ -22,6 +19,8 @@ In the readme_requirements.txt in the governmets folder of the game is a list of
 What I would like to see is that each of them gets som new values that can be used with them.
 
 New values listed below:
+
+{
 
 # Authorities support:
 #   - country_type
@@ -58,6 +57,7 @@ New values listed below:
 #   - country_flag
 #
 
+}
 
 3 - Scripted images
 
