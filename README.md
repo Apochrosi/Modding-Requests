@@ -4,7 +4,7 @@ Modding requests that I have for Paradox to make it possible to create better mo
 
 
 
-
+--------
 
 
 
@@ -119,72 +119,72 @@ Say you have a trait that has a "climate_dry_habitability = 10" modifier this tr
 
 With these new modifiers I could turn these complex habitability traits here
 
-[CODE]trait_pc_desert_preference = {
-    modifier = {
-        # Primary
-        pc_desert_habitability = @primary
+    trait_pc_desert_preference = {
+        modifier = {
+            # Primary
+            pc_desert_habitability = @primary
 
-        # Hot and Dry
-        pc_arid_habitability = @secondary
-        pc_savannah_habitability = @secondary
-        pc_dune_habitability = @secondary
-        pc_mesa_habitability = @secondary
-        pc_oasis_habitability = @secondary
-        pc_cambrian_habitability = @secondary
-        pc_latteral_habitability = @secondary
+            # Hot and Dry
+            pc_arid_habitability = @secondary
+            pc_savannah_habitability = @secondary
+            pc_dune_habitability = @secondary
+            pc_mesa_habitability = @secondary
+            pc_oasis_habitability = @secondary
+            pc_cambrian_habitability = @secondary
+            pc_latteral_habitability = @secondary
 
-        # Hot and Wet
-        pc_continental_habitability = @tertiary
-        pc_tropical_habitability = @tertiary
-        pc_ocean_habitability = @tertiary
-        pc_mangrove_habitability = @tertiary
-        pc_atoll_habitability = @tertiary
-        pc_tepui_habitability = @tertiary
-        pc_lush_habitability = @tertiary
-        pc_terrestrial_habitability = @tertiary
+            # Hot and Wet
+            pc_continental_habitability = @tertiary
+            pc_tropical_habitability = @tertiary
+            pc_ocean_habitability = @tertiary
+            pc_mangrove_habitability = @tertiary
+            pc_atoll_habitability = @tertiary
+            pc_tepui_habitability = @tertiary
+            pc_lush_habitability = @tertiary
+            pc_terrestrial_habitability = @tertiary
 
-        # Cold and Dry
-        pc_arctic_habitability = @tertiary
-        pc_alpine_habitability = @tertiary
-        pc_tundra_habitability = @tertiary
-        pc_steppe_habitability = @tertiary
-        pc_katpana_habitability = @tertiary
-        pc_atacama_habitability = @tertiary
-        pc_antarctic_habitability = @tertiary
-        pc_gelid_habitability = @tertiary
+            # Cold and Dry
+            pc_arctic_habitability = @tertiary
+            pc_alpine_habitability = @tertiary
+            pc_tundra_habitability = @tertiary
+            pc_steppe_habitability = @tertiary
+            pc_katpana_habitability = @tertiary
+            pc_atacama_habitability = @tertiary
+            pc_antarctic_habitability = @tertiary
+            pc_gelid_habitability = @tertiary
 
-        # Cold and Wet
-        pc_boreal_habitability = @quaternary
-        pc_cascadian_habitability = @quaternary
-        pc_bog_habitability = @quaternary
-        pc_crag_habitability = @quaternary
-        pc_glacial_habitability = @quaternary
-        pc_geothermal_habitability = @quaternary
-        pc_retinal_habitability = @quaternary
-        pc_marginal_habitability = @quaternary
+            # Cold and Wet
+            pc_boreal_habitability = @quaternary
+            pc_cascadian_habitability = @quaternary
+            pc_bog_habitability = @quaternary
+            pc_crag_habitability = @quaternary
+            pc_glacial_habitability = @quaternary
+            pc_geothermal_habitability = @quaternary
+            pc_retinal_habitability = @quaternary
+            pc_marginal_habitability = @quaternary
+        }
     }
-}[/CODE]
 
 Into simple ones like the one below.
 
-[CODE]trait_pc_desert_preference = {
-    modifier = {
-        # Primary
-        pc_desert_habitability = 20
+    trait_pc_desert_preference = {
+        modifier = {
+            # Primary
+            pc_desert_habitability = 20
 
-        # Hot and Dry
-        climate_hotdry_habitability = @secondary
+            # Hot and Dry
+            climate_hotdry_habitability = @secondary
 
-        # Hot and Wet
-        climate_hotwet_habitability = @tertiary
+            # Hot and Wet
+            climate_hotwet_habitability = @tertiary
 
-        # Cold and Dry
-        climate_colddry_habitability = @tertiary
+            # Cold and Dry
+            climate_colddry_habitability = @tertiary
 
-        # Cold and Wet
-        climate_coldwet_habitability = @quaternary
+            # Cold and Wet
+            climate_coldwet_habitability = @quaternary
+        }
     }
-}[/CODE]
 
 The primary modifer does have to be set to 20 though for the total to end up at 80 since the secondary modifier already gives it 60.
 
@@ -214,17 +214,17 @@ Would it be possible add a way for a species class to not show up in species app
 
 To sumarize I would for a species class to have "possible_secondary" work even if "playable" is set to "has_global_flag = game_started".
 
-possible_secondary = {
-	civics = {
-		OR = {
-			value = civic_machine_irregular_uplifter
-			value = civic_space_robotic_caretaker
+	possible_secondary = {
+		civics = {
+			OR = {
+				value = civic_machine_irregular_uplifter
+				value = civic_space_robotic_caretaker
+			}
 		}
+		text = SECONDARY_SPECIES_CLASS_INVALID
 	}
-	text = SECONDARY_SPECIES_CLASS_INVALID
-}
 
-playable = { has_global_flag = game_started }
+	playable = { has_global_flag = game_started }
 
 
 
@@ -272,18 +272,16 @@ Would it be possible to make it for ethics in the faction menu that we have more
 
 In the authorities.txt file you can specify if an authority starts with one ore more specified traits by using the "traits = {" tag. What I would to see is to be able to add conditions for these traits to appear. Such as for example if you choose a species appearance from the Arthropoid category and choose imperial authority your species gets a special hive_like trait.m
 
-[CODE]
 
-traits = {
-	if = {
-		limit = {
-			is_species_class = ART
+	traits = {
+		if = {
+			limit = {
+				is_species_class = ART
+			}
 		}
+		trait = trait_hive_like
 	}
-	trait = trait_hive_like
-}
 
-[/CODE]
 
 
 
@@ -301,90 +299,86 @@ For example if I added the collectivist and individualist ethic pari back into t
 
 If you added the ability to add AND to the civic area I would also be able make the ethic restrictions for this civic here much less complicated.
 
-[CODE]
-ethics = {
-	OR = {
-		value = ethic_gestalt_consciousness
-		value = ethic_light_gestalt_consciousness
+	ethics = {
+		OR = {
+			value = ethic_gestalt_consciousness
+			value = ethic_light_gestalt_consciousness
+		}
+		OR = {
+			value = ethic_gestalt_consciousness
+
+			value = ethic_fanatic_xenophobe
+			value = ethic_fanatic_pacifist
+			value = ethic_fanatic_isolationist
+
+			value = ethic_pacifist
+			value = ethic_xenophobe
+		}
+		OR = {
+			value = ethic_gestalt_consciousness
+
+			value = ethic_fanatic_xenophobe
+			value = ethic_fanatic_pacifist
+			value = ethic_fanatic_isolationist
+
+			value = ethic_isolationist
+			value = ethic_xenophobe
+		}
+		OR = {
+			value = ethic_gestalt_consciousness
+
+			value = ethic_fanatic_xenophobe
+			value = ethic_fanatic_pacifist
+			value = ethic_fanatic_isolationist
+
+			value = ethic_isolationist
+			value = ethic_pacifist
+		}
 	}
-	OR = {
-		value = ethic_gestalt_consciousness
-
-		value = ethic_fanatic_xenophobe
-		value = ethic_fanatic_pacifist
-		value = ethic_fanatic_isolationist
-
-		value = ethic_pacifist
-		value = ethic_xenophobe
-	}
-	OR = {
-		value = ethic_gestalt_consciousness
-
-		value = ethic_fanatic_xenophobe
-		value = ethic_fanatic_pacifist
-		value = ethic_fanatic_isolationist
-
-		value = ethic_isolationist
-		value = ethic_xenophobe
-	}
-	OR = {
-		value = ethic_gestalt_consciousness
-
-		value = ethic_fanatic_xenophobe
-		value = ethic_fanatic_pacifist
-		value = ethic_fanatic_isolationist
-
-		value = ethic_isolationist
-		value = ethic_pacifist
-	}
-}
-[/CODE]
 
 This would let us shorten this long and confusingly coded text above into a what I have written below. Certain ethics and civics restriction combinations that weren't possible before would also be possible now
 
-[CODE]
-ethics = {
-	OR = {
-		value = ethic_gestalt_consciousness
-		AND = {
-			value = ethic_light_gestalt_consciousness
-			value = ethic_fanatic_xenophobe
-		}
-		AND = {
-			value = ethic_light_gestalt_consciousness
-			value = ethic_fanatic_pacifist
-		}
-		AND = {
-			value = ethic_light_gestalt_consciousness
-			value = ethic_fanatic_isolationist
-		}
-		AND = {
-			value = ethic_light_gestalt_consciousness
-			value = ethic_isolationist
-			value = ethic_xenophobe
-		}
-		AND = {
+	ethics = {
+		OR = {
 			value = ethic_gestalt_consciousness
-			value = ethic_isolationist
-			value = ethic_pacifist
-		}
-		AND = {
-			value = ethic_gestalt_consciousness
-			value = ethic_xenophobe
-			value = ethic_pacifist
+			AND = {
+				value = ethic_light_gestalt_consciousness
+				value = ethic_fanatic_xenophobe
+			}
+			AND = {
+				value = ethic_light_gestalt_consciousness
+				value = ethic_fanatic_pacifist
+			}
+			AND = {
+				value = ethic_light_gestalt_consciousness
+				value = ethic_fanatic_isolationist
+			}
+			AND = {
+				value = ethic_light_gestalt_consciousness
+				value = ethic_isolationist
+				value = ethic_xenophobe
+			}
+			AND = {
+				value = ethic_gestalt_consciousness
+				value = ethic_isolationist
+				value = ethic_pacifist
+			}
+			AND = {
+				value = ethic_gestalt_consciousness
+				value = ethic_xenophobe
+				value = ethic_pacifist
+			}
 		}
 	}
-}
-[/CODE]
 
 21 - Add delayed tooltip removal value
 
 Create a NInterface tooltip define value that has to with how long after moving a mouse away from a tooltip it takes for the tooltip info window to go away.
 
-NInterface = {
-	TOOLTIP_TIME 					= 0
-	TOOLTIP_DELAYED_TIME 			= 0
-}
+	NInterface = {
+		TOOLTIP_TIME 					= 0
+		TOOLTIP_DELAYED_TIME 			= 0
+	}
 
 
 
@@ -417,13 +411,12 @@ let us exclude certain ethics from being affected by ethic shift. For example, l
 
 If this event instead had a xenophobe exclusion tag, xenophobe would not be the ethic that would be replaced by militarist, but instead the second least popular government ethic, materialist would be replaced by militarist instead.
 
-
-shift_ethic = {
-	ethic_spiritualist
-	exclude = {
-		ethic_authoritarian
+	shift_ethic = {
+		ethic_spiritualist
+		exclude = {
+			ethic_authoritarian
+		}
 	}
-}
 
 
 
