@@ -435,24 +435,31 @@ Would it be possible to let modders "clone" the origin system and have this extr
 Currently in the game all species classes need an acompanying ship set and vice versa. This leads to cases such as ship set mods where phantom species classes are added to the species class menu. In species class mods the problem is that any new species classes must share its shipset with another vanilla species class. This leads to a promlem regarding the name of the shipset, as the shipset gets its name from the alphabetical first species class that has that shipset as its preferred one. This leads to problems where the names of the vanilla shipsets have their names changed to something else because a mod implmenting new species classes has been used. Decoupling species classes from ship sets would fix all these problems.
 
 
-30 - The ability to modify species archetypes and -classes.
+30 - The ability to modify species archetypes and species classes.
 
 Add a way to modify the archetype and species class of a species through an event.
 
 
-31 - Ethics give traits
+31 - Ethics grant traits
 
 Make it so that ethics can grant traits to a species in the same way that civics and authorities can.
 
 
+32 - Reset/replace/remove ascension perks event command
+
+Give us a command that can be used to either remove specific ascension perks, replace a specific ascension perk with another or remove all of an empires perks. If for example the second ascension perk is removed through an event and not replaced by the same event make the third chosen ascension perk take its place. In other words if one an ascension perk goes missin make it so that the ones right after fall back to take the missing perk before it its place.
 
 
 
+33 - Reset/replace/remove traditions event command
+
+Give us a command that can be used to either remove specific traditions perks.
 
 
 
+34 - Drag and drop ascension perks
 
-
+Let us reorder the order which we see our ascension perks
 
 
 
