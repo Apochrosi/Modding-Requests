@@ -8,7 +8,7 @@ Modding requests that I have for Paradox to make it possible to create better mo
 
 
 
-1 - custom policy cooldowns
+1 - Custom policy cooldowns
 
 Policies should have a default cooldown period, but you should also be able to give a policy a custom cooldown different from the default. 
 
@@ -32,6 +32,7 @@ New values listed below:
 	#   - country_flag
 	#   - species_class
 	#   - archetype
+	#   - origins
 	#
 
 
@@ -44,6 +45,7 @@ New values listed below:
 	#   - traits
 	#   - country_flag
 	#   - species_class
+	#   - origins
 	#
 
 
@@ -55,6 +57,7 @@ New values listed below:
 
 	#   - traits
 	#   - country_flag
+	#   - origins
 	#
 
 
@@ -65,15 +68,15 @@ While we do have scripted localisation granting us text that can change dependin
 
 
 
-4 - scriptable species rights
+4 - Scriptable species rights
 
 Currently we have the ability to edit already implemented species rights but we have no way of implementing our own into the game.
 
 
 
-5 - technology feature flags
+5 - Technology feature flags
 
-Feature falgs for technologies are currenlty hard locked to vanilla ones and new ones cannot be created, this creates some problems when dealing with special technologies that should enable or disable certain features.
+Feature flags for technologies are currently hard locked to vanilla ones and new ones cannot be created, this creates some problems when dealing with special technologies that should enable or disable certain features.
 
 
 
@@ -89,9 +92,9 @@ Depending on whether some features get implemted in the future (backgrounds) thi
 
 
 
-8 - A way to divide authorities
+8 - A way to divide authorities into categories/groups
 
-While the game keeps getting bigger and bigger, new authorites seems to be popping up more often. What we need is a way to divide authorites into types and being able to choose how and when which authorites appear in the main species creation menu. Currently the only way to make something like this possible is to make custom ethics that take the role of buttons in this menu, but that solution just causes problems later on.
+While the game keeps getting bigger and bigger, new authorites seems to be popping up more often. What we need is a way to divide authorites into types and being able to choose how and when which authorites appear in the main species creation menu. Currently the only way to make something like this possible is to make custom ethics that take the role of buttons in this menu, but that solution just causes problems later on. We should for example have two authority buttons to switch between, one would show normal auhorities while the second would display gestalt authorities. We should also be able o mod in our own buttons and divide them ourselves.
 
 
 
@@ -107,7 +110,7 @@ By having a Psibernetic still being both Psionic and Cybernetic in the code, fil
 
 
 
-10 - climate Habitability modifiers
+10 - Climate Habitability modifiers
 
 Currently in the game there are two ways to get better habitability for a planet. The first is a generic pop_environment_tolerance that gives a flat habitability bonus to all planets and a pc_***_habitability modifier that gives bonus habitability for a certain planet.
 
@@ -228,7 +231,7 @@ To sumarize I would for a species class to have "possible_secondary" work even i
 
 
 
-14 - custom namelist useable in create_leader event 
+14 - Custom namelist useable in create_leader event 
 
 Would it possible to have the create_leader use a specified namelist when it genereates a leader. This would make it possible to let the name list be in charge of choosing a name for the leader instead of us having to clone the whole create_leader sequence for each new name we want randomize.
 
@@ -268,7 +271,7 @@ Would it be possible to make it for ethics in the faction menu that we have more
 
 
 
-18 - authority trait restrictions
+18 - Authority trait restrictions
 
 In the authorities.txt file you can specify if an authority starts with one ore more specified traits by using the "traits = {" tag. What I would to see is to be able to add conditions for these traits to appear. Such as for example if you choose a species appearance from the Arthropoid category and choose imperial authority your species gets a special hive_like trait.m
 
@@ -382,7 +385,7 @@ Create a NInterface tooltip define value that has to with how long after moving 
 
 
 
-22 - value formulas
+22 - Value formulas
 
 The ability for use to write mathematical formulas in the code or have values be different by more than one subvalue
 
@@ -390,7 +393,7 @@ Let us also be able to modify how values like tradition cost is calculated.
 
 
 
-23 - resource tag question
+23 - Resource tag question
 
 What does the newly added resources tag in species classes do?
 
@@ -400,7 +403,7 @@ What does the newly added resources tag in species classes do?
 Let us create and make our own custom planet values like ammenities with modifiers.
 
 
-25 - editable shift_ethic command
+25 - Editable shift_ethic command
 
 make shift_ethic customizable and let us change how it works.
 
