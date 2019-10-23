@@ -22,40 +22,40 @@ New values listed below:
 
 
 
-    # Authorities support:
-    #   - country_type
-    #   - ethics
+	# Authorities support:
+	#   - country_type
+	#   - ethics
 
-    #   - traits
-    #   - civics
-    #   - authority
-    #   - country_flag
-    #   - species_class
-    #   - archetype
-    #
-
-
-    # Civics support:
-    #   - country_type
-    #   - ethics
-    #   - authority
-    #   - civics
-
-    #   - traits
-    #   - country_flag
-    #   - species_class
-    #
+	#   - traits
+	#   - civics
+	#   - authority
+	#   - country_flag
+	#   - species_class
+	#   - archetype
+	#
 
 
-    # Species classes support:
-    #   - country_type
-    #   - ethics
-    #   - authority
-    #   - civics
+	# Civics support:
+	#   - country_type
+	#   - ethics
+	#   - authority
+	#   - civics
 
-    #   - traits
-    #   - country_flag
-    #
+	#   - traits
+	#   - country_flag
+	#   - species_class
+	#
+
+
+	# Species classes support:
+	#   - country_type
+	#   - ethics
+	#   - authority
+	#   - civics
+
+	#   - traits
+	#   - country_flag
+	#
 
 
 
@@ -119,72 +119,72 @@ Say you have a trait that has a "climate_dry_habitability = 10" modifier this tr
 
 With these new modifiers I could turn these complex habitability traits here
 
-    trait_pc_desert_preference = {
-        modifier = {
-            # Primary
-            pc_desert_habitability = @primary
+	trait_pc_desert_preference = {
+		modifier = {
+			# Primary
+			pc_desert_habitability = @primary
 
-            # Hot and Dry
-            pc_arid_habitability = @secondary
-            pc_savannah_habitability = @secondary
-            pc_dune_habitability = @secondary
-            pc_mesa_habitability = @secondary
-            pc_oasis_habitability = @secondary
-            pc_cambrian_habitability = @secondary
-            pc_latteral_habitability = @secondary
+			# Hot and Dry
+			pc_arid_habitability = @secondary
+			pc_savannah_habitability = @secondary
+			pc_dune_habitability = @secondary
+			pc_mesa_habitability = @secondary
+			pc_oasis_habitability = @secondary
+			pc_cambrian_habitability = @secondary
+			pc_latteral_habitability = @secondary
 
-            # Hot and Wet
-            pc_continental_habitability = @tertiary
-            pc_tropical_habitability = @tertiary
-            pc_ocean_habitability = @tertiary
-            pc_mangrove_habitability = @tertiary
-            pc_atoll_habitability = @tertiary
-            pc_tepui_habitability = @tertiary
-            pc_lush_habitability = @tertiary
-            pc_terrestrial_habitability = @tertiary
+			# Hot and Wet
+			pc_continental_habitability = @tertiary
+			pc_tropical_habitability = @tertiary
+			pc_ocean_habitability = @tertiary
+			pc_mangrove_habitability = @tertiary
+			pc_atoll_habitability = @tertiary
+			pc_tepui_habitability = @tertiary
+			pc_lush_habitability = @tertiary
+			pc_terrestrial_habitability = @tertiary
 
-            # Cold and Dry
-            pc_arctic_habitability = @tertiary
-            pc_alpine_habitability = @tertiary
-            pc_tundra_habitability = @tertiary
-            pc_steppe_habitability = @tertiary
-            pc_katpana_habitability = @tertiary
-            pc_atacama_habitability = @tertiary
-            pc_antarctic_habitability = @tertiary
-            pc_gelid_habitability = @tertiary
+			# Cold and Dry
+			pc_arctic_habitability = @tertiary
+			pc_alpine_habitability = @tertiary
+			pc_tundra_habitability = @tertiary
+			pc_steppe_habitability = @tertiary
+			pc_katpana_habitability = @tertiary
+			pc_atacama_habitability = @tertiary
+			pc_antarctic_habitability = @tertiary
+			pc_gelid_habitability = @tertiary
 
-            # Cold and Wet
-            pc_boreal_habitability = @quaternary
-            pc_cascadian_habitability = @quaternary
-            pc_bog_habitability = @quaternary
-            pc_crag_habitability = @quaternary
-            pc_glacial_habitability = @quaternary
-            pc_geothermal_habitability = @quaternary
-            pc_retinal_habitability = @quaternary
-            pc_marginal_habitability = @quaternary
-        }
-    }
+			# Cold and Wet
+			pc_boreal_habitability = @quaternary
+			pc_cascadian_habitability = @quaternary
+			pc_bog_habitability = @quaternary
+			pc_crag_habitability = @quaternary
+			pc_glacial_habitability = @quaternary
+			pc_geothermal_habitability = @quaternary
+			pc_retinal_habitability = @quaternary
+			pc_marginal_habitability = @quaternary
+		}
+	}
 
 Into simple ones like the one below.
 
-    trait_pc_desert_preference = {
-        modifier = {
-            # Primary
-            pc_desert_habitability = 20
+	trait_pc_desert_preference = {
+		modifier = {
+			# Primary
+			pc_desert_habitability = 20
 
-            # Hot and Dry
-            climate_hotdry_habitability = @secondary
+			# Hot and Dry
+			climate_hotdry_habitability = @secondary
 
-            # Hot and Wet
-            climate_hotwet_habitability = @tertiary
+			# Hot and Wet
+			climate_hotwet_habitability = @tertiary
 
-            # Cold and Dry
-            climate_colddry_habitability = @tertiary
+			# Cold and Dry
+			climate_colddry_habitability = @tertiary
 
-            # Cold and Wet
-            climate_coldwet_habitability = @quaternary
-        }
-    }
+			# Cold and Wet
+			climate_coldwet_habitability = @quaternary
+		}
+	}
 
 The primary modifer does have to be set to 20 though for the total to end up at 80 since the secondary modifier already gives it 60.
 
