@@ -20,44 +20,44 @@ What I would like to see is that each of them gets som new values that can be us
 
 New values listed below:
 
-{
-
-# Authorities support:
-#   - country_type
-#   - ethics
-
-#   - traits
-#   - civics
-#   - authority
-#   - country_flag
-#   - species_class
-#   - archetype
-#
 
 
-# Civics support:
-#   - country_type
-#   - ethics
-#   - authority
-#   - civics
+    # Authorities support:
+    #   - country_type
+    #   - ethics
 
-#   - traits
-#   - country_flag
-#   - species_class
-#
+    #   - traits
+    #   - civics
+    #   - authority
+    #   - country_flag
+    #   - species_class
+    #   - archetype
+    #
 
 
-# Species classes support:
-#   - country_type
-#   - ethics
-#   - authority
-#   - civics
+    # Civics support:
+    #   - country_type
+    #   - ethics
+    #   - authority
+    #   - civics
 
-#   - traits
-#   - country_flag
-#
+    #   - traits
+    #   - country_flag
+    #   - species_class
+    #
 
-}
+
+    # Species classes support:
+    #   - country_type
+    #   - ethics
+    #   - authority
+    #   - civics
+
+    #   - traits
+    #   - country_flag
+    #
+
+
 
 3 - Scripted images
 
