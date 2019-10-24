@@ -1,6 +1,6 @@
 
 # Modding-Requests
-Modding requests that I have for Paradox to make it possible to create better mods.
+Modding requests that I want Paradox to implement to expand the list of features that can be modded and give the community the ability to create even better mods.
 
 
 
