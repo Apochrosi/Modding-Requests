@@ -240,7 +240,7 @@ Would it possible to have the create_leader use a specified namelist when it gen
 
 The next few issues has to do with the NSpecies part of the defines.
 
-Currently in the game all these values are divided into two types, those used by artificial species and those used by non-artificial species. The problem lies with fact that if you try to implement a new species into the game it will have to share these values with one of those groups instead of belonging to its own.
+Currently in the game all of these values are divided into two types, those used by artificial species and those used by non-artificial species. The problem lies with fact that if you try to implement a new species into the game it will have to share these values with one of those groups instead of belonging to its own.
 
 Currently in the game these values here: "TRAIT_MODIFICATION_BASE_COST", "TRAIT_CLIMATE_MODIFICATION_COST", "TRAIT_MODIFICATION_COST_MULT", "MODIFICATION_COST_MULT" are used for all species except for robots and machines which instead use: "ROBO_TRAIT_MODIFICATION_BASE_COST", "ROBO_TRAIT_MODIFICATION_COST_MULT", "ROBO_MODIFICATION_COST_MULT".
 
@@ -248,7 +248,7 @@ What I would like to see is these defines here being opened up a bit more and ma
 
 The main reason for why I want this is that I have made a new buildable pop and implemented it in a mod thats called bio-constructs. These are genetically engineered lifeforms made from the bottom that has uniwue traits that make them different from standart biological species. When implemented correctly these would be an laternative to robobts and one that empires that chooses biological ascenstion to be more likely to choose. The uniwue feature of these beingsshould be that they would be a lot easier to modify the traits for. As have alsready said this isn't possible right now as they would get the standard "TRAIT_MODIFICATION_BASE_COST" value since it isn't possible create a nex exclusive one for the BIO_CONSTRUCT archetype. If i also do modify the "TRAIT_MODIFICATION_BASE_COST" it would affect both bio constructs and regular biological species something that I would like to avoid.
 
-I would also like to see a define value that defines the defualt value for changing species portrait. Such a define should also be given to name changes. Changing only the species name shouldn't take 5000 society points for example. Maybe a child define tag that give a percentage of the species modification if only the portrait or name is changed.
+I would also like to see a define value that defines the defualt value for changing species portraits. Such a define should also be given to name changes. Changing only the species name shouldn't take 5000 society points for example. Maybe a child define tag that give a percentage of the species modification if only the portrait or name is changed.
 
 Adding these features would let modders more easily add species classes and archetypes that are supposed to represent species that aren't biological but also not robotic either.
 
@@ -464,10 +464,16 @@ Give us a command that can be used to either remove specific traditions perks.
 Let us reorder the order which we see our ascension perks
 
 
+35 - Traditions as buttons
 
 
 
+In short make it possible for an adopted tradition to work as a button or switch changing or swapping what tradition tree you see in another category.
 
+
+36 - Traits have modifiers that change depending on a given scenario
+
+What I would like to see is the ability for a trait to have a multiple modifiers that each is only used in a spesific scenario. Say for example let us change the fleeting trait so it gives -10 years lifespan to biological species and -20 to Lithoid species. Having both these different values being considered the same trait instead of hhaving both a trait_fleeting and trait_fleeting_lithoid could introduce som interesting scenarios when creating new traits.
 
 
 
