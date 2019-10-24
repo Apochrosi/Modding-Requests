@@ -466,9 +466,9 @@ Let us reorder the order which we see our ascension perks
 
 35 - Traditions as buttons
 
+I would like the ability to have traditiions from one tradition tree once unlocked act as buttons that can be used to switch between multiple different tradion trees in another tradition tree. For example say you have two tradition trees, A and B. Traddition tree A has three different traditions A1, A2 and A3 that you can research and that you can aquire all of. After researching your first tradition in tradition three 1 you unlock the ability to start researching traditions in tradition tree 2. After unlocking multiple traditions in tradition tree 1 you can click on each of them to swap the current tradition tree that is displayed in tradition tree 2.
 
-
-In short make it possible for an adopted tradition to work as a button or switch changing or swapping what tradition tree you see in another category.
+In short make it possible for an adopted tradition to work as a button or a switch changing or swapping what tradition tree you see in another category.
 
 
 36 - Traits have modifiers that change depending on a given scenario
@@ -476,7 +476,9 @@ In short make it possible for an adopted tradition to work as a button or switch
 What I would like to see is the ability for a trait to have a multiple modifiers that each is only used in a spesific scenario. Say for example let us change the fleeting trait so it gives -10 years lifespan to biological species and -20 to Lithoid species. Having both these different values being considered the same trait instead of hhaving both a trait_fleeting and trait_fleeting_lithoid could introduce som interesting scenarios when creating new traits.
 
 
+37 - Terraforming costing different or multiple resources
 
+Make it so that you can choose what type of resources you must use to terraform a planet. In the current vanilla game th terraforming cost can only be paid in energy credits and there doesn't appear to be any way to change that or make it cost multiple types of resources to terraform. The ability make the terraforming process of a planet cost strategic resources would also be nice.
 
 
 
