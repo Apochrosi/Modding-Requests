@@ -81,7 +81,7 @@ Feature flags for technologies are currently hard locked to vanilla ones and new
 
 6 - Custom personality behaviours
 
-There are currently a bunch of personality behaviours implemented in the game that we can use as we wish, and new personalities can be created without too much trouble. The problem lies rather with influencing the behavior of personalities beyond what the game offers by default. What I would like to see is for us being able to add in our own behavoirs that we can use to make personalities more unique, as there have been multiple times where I have wanted to use them but found it unable to be changed. Take for example the robot_exploiter and the robot_liberator behaviours. Those are used to influence whether an empire give robots free will and equal rights or enslave them. One scenario I have encountered is when I implemeted a new species class called ethereals that where one could say the spiritual answer to robots in the form of psionic energy beings. What I liked to do would be to give some personalities a ethereal_exploiter = yes behaviour but since behaviours cannot be added that can't happen.
+There are currently a bunch of personality behaviours implemented in the game that we can use as we wish, and new personalities can be created without too much trouble. The problem lies rather with influencing the behavior of personalities beyond what the game offers by default. What I would like to see is for us to be able to add in our own behaviours that we can use to make personalities more unique, as there have been multiple times where I have wanted to use them but found it unable to be changed. Take for example the robot_exploiter and the robot_liberator behaviours. Those are used to influence whether an empire give robots free will and equal rights or enslave them. One scenario I have encountered is when I implemeted a new species class called ethereals that where one could say the spiritual answer to robots in the form of psionic energy beings. What I liked to do would be to give some personalities a ethereal_exploiter = yes behaviour but since behaviours cannot be added that can't happen.
 
 
 
@@ -449,13 +449,13 @@ Make it so that ethics can grant traits to a species in the same way that civics
 
 32 - Reset/replace/remove ascension perks event command
 
-Give us a command that can be used to either remove specific ascension perks, replace a specific ascension perk with another or remove all of an empires perks. If for example the second ascension perk is removed through an event and not replaced by the same event make the third chosen ascension perk take its place. In other words if one an ascension perk goes missin make it so that the ones right after fall back to take the missing perk before it its place.
+Give us a command that can be used in events to either remove specific ascension perks, replace a specific ascension perk with another or remove all of an empires perks. If for example the second ascension perk is removed through an event and not replaced by the same event make the third chosen ascension perk take its place. In other words if one an ascension perk goes missin make it so that the ones right after fall back to take the missing perk before it its place.
 
 
 
 33 - Reset/replace/remove traditions event command
 
-Give us a command that can be used to either remove specific traditions perks.
+Give us a command that can be used in events to either remove specific traditions perks.
 
 
 
@@ -478,7 +478,7 @@ What I would like to see is the ability for a trait to have a multiple modifiers
 
 37 - Terraforming costing different or multiple resources
 
-Make it so that you can choose what type of resources you must use to terraform a planet. In the current vanilla game th terraforming cost can only be paid in energy credits and there doesn't appear to be any way to change that or make it cost multiple types of resources to terraform. The ability make the terraforming process of a planet cost strategic resources would also be nice.
+Make it so that you can choose what type of resources you must use to terraform a planet. In the current vanilla game the terraforming cost can only be paid in energy credits and there doesn't appear to be any way to change that or make it cost multiple types of resources to terraform. The ability make the terraforming process of a planet cost strategic resources would also be nice.
 
 
 
