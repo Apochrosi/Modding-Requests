@@ -466,7 +466,7 @@ Let us reorder the order which we see our ascension perks
 
 35 - Traditions as buttons
 
-I would like the ability to have traditiions from one tradition tree once unlocked act as buttons that can be used to switch between multiple different tradion trees in another tradition tree. For example say you have two tradition trees, A and B. Traddition tree A has three different traditions A1, A2 and A3 that you can research and that you can aquire all of. After researching your first tradition in tradition three 1 you unlock the ability to start researching traditions in tradition tree 2. After unlocking multiple traditions in tradition tree 1 you can click on each of them to swap the current tradition tree that is displayed in tradition tree 2.
+I would like the ability to have traditions from one tradition tree once unlocked act as buttons that can be used to switch between multiple different tradion trees in another tradition tree. For example say you have two tradition trees, A and B. Traddition tree A has three different traditions A1, A2 and A3 that you can research and that you can aquire all of. After researching your first tradition in tradition three 1 you unlock the ability to start researching traditions in tradition tree 2. After unlocking multiple traditions in tradition tree 1 you can click on each of them to swap the current tradition tree that is displayed in tradition tree 2.
 
 In short make it possible for an adopted tradition to work as a button or a switch changing or swapping what tradition tree you see in another category.
 
