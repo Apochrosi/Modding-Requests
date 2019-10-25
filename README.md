@@ -44,6 +44,7 @@ New values listed below:
 	#   - traits
 	#   - country_flag
 	#   - species_class
+	#   - archetype
 	#   - origin
 	#
 
@@ -58,6 +59,19 @@ New values listed below:
 	#   - country_flag
 	#   - origin
 	#
+
+
+	# Origins support:
+	#   - country_type
+	#   - ethics
+	#   - authority
+	#   - civics
+	#   - traits
+	#   - country_flag
+	#   - species_class
+	#   - archetype
+	#
+
 
 
 
@@ -481,7 +495,9 @@ What I would like to see is the ability for a trait to have a multiple modifiers
 Make it so that you can choose what type of resources you must use to terraform a planet. In the current vanilla game the terraforming cost can only be paid in energy credits and there doesn't appear to be any way to change that or make it cost multiple types of resources to terraform. The ability make the terraforming process of a planet cost strategic resources would also be nice.
 
 
+38 - Leader age priority and leader age add
 
+In stellaris you can change the default leader_age_min and -max values by either changing the default values in the defines, adding a custom value to a species class or to add a custom value to a trait. What I would like to see is an extra value leader_age_priority or leader_age_min_priortiy/leader_age_max_priortiy that could be added to a species class or trait that would help discern what leader_age you would actually end up with if your species has two traits that modify leader_age_min and -max. For example lets say a lithoid species, the default min age of a leader is 28 but as a lithoid that value is changed to 50, if we change this species to a hive mind it also gets the hive mind trait that changes the default value to 10. Which of these traits has a priority now to change the leader age min, will it be changed to 50 as the Lithoid traits says, or will it becom 10 as the hive mind tells us. In any case there are scenarios where you would want either scenario to be true, therefore adding a leader_age_priority would help solve this issue.
 
 
 
