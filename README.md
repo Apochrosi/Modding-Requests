@@ -113,7 +113,7 @@ While the game keeps getting bigger and bigger, new authorites seems to be poppi
 
 9 - Trait folding
 
-This would be the ability for us to define instances where if a specific set of traits are on a species, you will instead of seeing both of those traits, see a new third one. For example, lets say a species has the Quick Learners trait and you genemod Intelligent onto it. When the gene edit is done, the species appears to have a new trait called Talented Learners. You should be able to define what modifiers this new folded trait would have. The folded trait should also be cosmetci and by that I mean that the species in the code is registered to still have the components of the folded trait on it and that the new trait is just there to shorten the trait or combine redundant traits.
+This would be the ability for us to define instances where if a specific set of traits are on a species, you will instead of seeing both of those traits, see a new third one. For example, lets say a species has the Quick Learners trait and you genemod Intelligent onto it. When the gene edit is done, the species appears to have a new trait called Talented Learners. You should be able to define what modifiers this new folded trait would have. The folded trait should also be cosmetic and by that I mean that the species in the code is registered to still have the components of the folded trait on it and that the new trait is just there to shorten the trait or combine redundant traits.
 
 The reason for me wanting this is a scenario where a species has multiple traits that give similar effects like immortality.
 
