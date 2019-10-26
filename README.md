@@ -113,19 +113,17 @@ While the game keeps getting bigger and bigger, new authorites seems to be poppi
 
 9 - Trait folding
 
-This would be the ability for us to define instances where if a specific set of traits are on a species, you will instead of seeing both of those traits, see a new third one. For example, lets say a species has the Quick Learners trait and you genemod Intelligent onto it. When the gene edit is done, the species appears to have a new trait called Talented Learners. You should be able to define what modifiers this new folded trait would have. The folded trait should also be cosmetic and by that I mean that the species in the code is registered to still have the components of the folded trait on it and that the new trait is just there to shorten the trait or combine redundant traits.
+This would be the ability for us to define instances where if a specific set of traits are on a species, you will instead of seeing both of those traits, see a new third one. For example, lets say a species has the Quick Learners trait and you genemod Intelligent onto it. When the gene edit is done, the species appears to have a new trait called Talented Learners. You should be able to define what modifiers this new folded trait would have. The folded trait should also be cosmetic and by that I mean that the species in the code is registered to still have the components of the folded trait on it, and that the new trait is just there to shorten the amount of traits or combine traits with redundant abiliies.
 
-The reason for me wanting this is a scenario where a species has multiple traits that give similar effects like immortality.
+I once made a mod where I created a new ascension path, where your species ended up both Psionic and Cybernetic at the end. What I wanted was to have one Psibernetic trait listed on the species instead of Cybernetic and Psionic both being listed. The problem is that by introducing a new trait and replacing those two I would have to go back throughout the rest of the game files and edit them to now affect the new Psibernetic trait.
 
-There was one mod where I made a custom ascension path where your species ended up both Psionic and Cybernetic, what I wanted was to have one Psibernetic trait listed on the species instead of those two at the same time. The problem is that by introducing a new trait and replacing those two I would have to go back throughout the rest of the game files and edit them to now effect the new trait.
-
-By instead having a Psibernetic species still having both the Psionic and Cybernetic traits in the code, files that deal with events related to psionic species or cybernetic species will need minimal if any changes to their code.
+By having a Psibernetic species that still has both the Psionic and Cybernetic traits in the code, files that deal with events related to psionic species or cybernetic species will need minimal, if any changes to their code.
 
 
 
 10 - Climate Habitability modifiers
 
-Currently in the game there are two ways to get better habitability for a planet. The first is a generic pop_environment_tolerance that gives a flat habitability bonus to all planets and a pc_***_habitability modifier that gives bonus habitability for a certain planet.
+There are currently two ways to get better habitability for a planet in the game. The first is a generic pop_environment_tolerance that gives a flat habitability bonus to all planets and a pc_***_habitability modifier that gives bonus habitability for a certain planet.
 
 The problem with this system is when you want to add different habitability modifiers for different planets you end with very many modifiers. This isn't really a problem in the vanilla game but when playing a modded game with 30 planet classes the list of planet habitability modifiers added to each species starts getting really long and confusing.
 
