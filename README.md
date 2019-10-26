@@ -123,13 +123,16 @@ By having a Psibernetic species that still has both the Psionic and Cybernetic t
 
 10 - Climate Habitability modifiers
 
-There are currently two ways to get better habitability for a planet in the game. The first is a generic pop_environment_tolerance that gives a flat habitability bonus to all planets and a pc_***_habitability modifier that gives bonus habitability for a certain planet.
+There are currently two ways to get better habitability for a planet in the game. The first is a generic pop_environment_tolerance that gives a flat habitability bonus to all planets and the second is a pc_***_habitability modifier that gives bonus habitability for a certain planet.
 
-The problem with this system is when you want to add different habitability modifiers for different planets you end with very many modifiers. This isn't really a problem in the vanilla game but when playing a modded game with 30 planet classes the list of planet habitability modifiers added to each species starts getting really long and confusing.
+The problem with this system is when you want to add different habitability modifiers for different planets and you end with very many modifiers.
+The problem with this system is a scenario where you want to add muliple habitability modifiers for different planets to a trait, you would then end up with too many different modifiers on that trait.
 
-My solution for this problem would be to add a "climate_***_habitability" modifier. Each planet class in the game can be given a special climate category that it is considered to be part of and this new modifier would modify the habitability of all the planets in its climate category.
+This isn't really a problem in the vanilla game, but when you are playing a modded game with 30 planet classes or more, the list of planet habitability modifiers added to each species starts to get long and confusing.
 
-Say you have a trait that has a "climate_dry_habitability = 10" modifier this trait would then give the species plus 10% habitability to all planet classes with dry habitability which in the vanilla game would correspond to Arid, Dessert and Savannah worlds.
+My solution to this problem would be to add a "climate_***_habitability" modifier. Each of the nine planet classes in the vanilla game are divided into three climate categories, this new modifier would then modify the habitability of all the planets in its climate category.
+
+Lets say you have a trait that has a "climate_dry_habitability = 10" modifier, this trait would then give the species plus 10% habitability to all planet classes with dry habitability which in the vanilla game would correspond to Arid, Dessert and Savannah worlds.
 
 With these new modifiers I could turn these complex habitability traits here:
 
@@ -208,7 +211,7 @@ All unimportant tags have been removed from these two traits to make it easier t
 
 11 - possible/potential tags for spritetypes and container window icons
 
-Give sprite icon like the arrows used in traditions to have possible and potential tags. This will give us the ability for arrows or other images in such menus to be able to appear and dissapear under certain conditions.
+Give sprite icons like the arrows used in traditions to have possible and potential tags. This will give us the ability for arrows or other images in such menus to be able to appear and dissapear under certain conditions.
 
 An example of this would be the ability to change which arrows appear in the tradition menu under a certain condition.
 
@@ -218,13 +221,13 @@ Or maybe just add a arrow/image swap file where we can do this. Under condition 
 
 12 - Moddable election types
 
-Currently in the game there are two distinct election types with the democratic and oligarchic types. What I would like to do would be to change how these two worked and be able to create new ones. Maybe also be able to combine the has_heir with them to create a new election type would work correctly having both the dynastic heir attribute and the election attribute.
+Currently in the game there are two distinct election types with the democratic and oligarchic types. What I would like to do, would be to modify how these two work and be able to create new ones. Maybe also be able to combine the has_heir with them to create a new election type would work correctly having both the dynastic heir attribute and the election attribute.
 
 
 
 13 - possible_secondary tag in species classes
 
-Would it be possible to add a way for a species class to not show up in species appearance list in the beginning of the game but being able to show up when you go to the secondary species appearance selection screen when you have chosen a civic that enables that feature. The reason why I want this is that I have made some special civics that can only be chosen at start that gives the player a robotic secondary species. The problem is that for this to work correctly I would have to make the ROBOT species class available for species selection and it would thus be a category that you could choose a portrait from. There would thus be two categories for the robotic portraits one only made for playing as machines with machine inteligence and one category only for selecting the appearance for a robotic secondary species. Making it so a species class could show up in the secondary species selection but not in the main species collection would solve this issue. Currently I'm forced to have the player choose their secondary species from the Machine species class and that creates a bunch of other problems after the game has started. These problems could be solved if I found a way to convert a the spawned species class from MACHINE to ROBOT but I have not being able to do that successfully either.
+Would it be possible to add a way for a species class to not show up in species appearance list in the beginning of the game, but being able to show up when you go to the secondary species appearance selection screen when you have chosen a civic that enables that feature. The reason why I want this is that I have made some special civics that can only be chosen at the start that gives the player a robotic secondary species. The problem is that for this to work correctly, I would have to make the ROBOT species class available in the species selection and it would thus appear as a species category that you could choose a portrait from. There would thus be two categories for the robotic portraits one only made for playing as machines with machine inteligence and one category only for selecting the appearance for a robotic secondary species. Making it so a species class could show up in the secondary species selection but not in the main species collection would solve this issue. Currently I'm forced to have the player choose their secondary species from the Machine species class and that creates a bunch of other problems after the game has started. These problems could be solved if I found a way to convert a the spawned species class from MACHINE to ROBOT but I have not being able to do that successfully either.
 
 To summarize I would for a species class to have "possible_secondary" work even if "playable" is set to "has_global_flag = game_started".
 
