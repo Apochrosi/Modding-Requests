@@ -1,6 +1,6 @@
 
 # Modding-Requests
-Modding requests that I want Paradox to implement to expand the list of features that can be modded and give the community the ability to create even better mods.
+Modding requests that I want Paradox to implement and expand the list of features that can be modded, and give the community the ability to create even better mods.
 
 
 
@@ -15,7 +15,7 @@ Policies should have a default cooldown period, but you should also be able to g
 
 2 - More government requirements
 
-In the readme_requirements.txt in the governments folder there is a list of which values can be used to restrict authorities, civics and species classes. What I would like to see is that each of them gets some new values that can be used with them.
+In the readme_requirements.txt in the governments folder, there is a list of which values can be used to restrict authorities, civics and species classes. What I would like to see is that each of them gets some new values that can be used with them.
 
 New values listed below:
 
@@ -101,13 +101,13 @@ There are currently a bunch of personality behaviours implemented in the game th
 
 7 - Zero point ethics
 
-Depending on whether some features get implemted in the future (backgrounds) this is something that I need for some things to work. This is just about wanting the ability to have an ethic cost 0 ethic points. With this ability one could creat "fake" ethics that only exists in the game show a different set of authorites in the empire creation menu deppending on which was chosen. Other uses also exists.
+Depending on whether some features get implemented in the future (backgrounds) this is something that I need for some things to work. This is just about wanting the ability to have an ethic cost 0 ethic points. With this ability one could create "fake" ethics that only exists in the game that show a different set of authorites in the empire creation menu depending on which was chosen. Other uses also exists.
 
 
 
 8 - A way to divide authorities into categories/groups
 
-While the game keeps getting bigger and bigger, new authorites seems to be popping up more often. What we need is a way to divide authorites into types and being able to choose how and when which authorites appear in the main species creation menu. Currently the only way to make something like this possible is to make custom ethics that take the role of buttons in this menu, but that solution just causes problems later on. We should for example have two authority buttons to switch between, one would show normal auhorities while the second would display gestalt authorities. We should also be able o mod in our own buttons and divide them ourselves.
+While the game keeps getting bigger and bigger, new authorites seems to be popping up more often. What we need is a way to divide authorites into types and being able to choose how and when which authorites appear in the main species creation menu. Currently the only way to make something like this possible is to make custom ethics that take the role of buttons in this menu, but that solution just causes problems later on. We should for example have two authority buttons to switch between, one would show normal auhorities while the second would display gestalt authorities. We should also be able to mod in our own buttons and divide authorities into categories ourselves.
 
 
 
@@ -119,7 +119,7 @@ The reason for me wanting this is a scenario where a species has multiple traits
 
 There was one mod where I made a custom ascension path where your species ended up both Psionic and Cybernetic, what I wanted was to have one Psibernetic trait listed on the species instead of those two at the same time. The problem is that by introducing a new trait and replacing those two I would have to go back throughout the rest of the game files and edit them to now effect the new trait.
 
-By instead having a Psibernetic species still having both the Psionic and Cybernetic traits in the code, files that deal with events related to psionic species or cybernetic species will need minimal if any code changes.
+By instead having a Psibernetic species still having both the Psionic and Cybernetic traits in the code, files that deal with events related to psionic species or cybernetic species will need minimal if any changes to their code.
 
 
 
