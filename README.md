@@ -501,6 +501,9 @@ Make it so that you can choose what type of resources you must use to terraform 
 In stellaris you can change the default leader_age_min and -max values by either changing the default values in the defines, adding a custom value to a species class or to add a custom value to a trait. What I would like to see is an extra value leader_age_priority or leader_age_min_priortiy/leader_age_max_priortiy that could be added to a species class or trait that would help discern what leader_age you would actually end up with if your species has two traits that modify leader_age_min and -max. For example lets say a lithoid species, the default min age of a leader is 28 but as a lithoid that value is changed to 50, if we change this species to a hive mind it also gets the hive mind trait that changes the default value to 10. Which of these traits has a priority now to change the leader age min, will it be changed to 50 as the Lithoid traits says, or will it becom 10 as the hive mind tells us. In any case there are scenarios where you would want either scenario to be true, therefore adding a leader_age_priority would help solve this issue.
 
 
+39 - Adding new maps
+
+You can currently replace the galaxy maps included in the vanilla game by naming custom map the same as a vanilla one. What I would like to see is the ability to add new maps to the game so that they exist alongside the vanilla ones instead of replacing them.
 
 
 
