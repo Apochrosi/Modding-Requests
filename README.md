@@ -467,11 +467,9 @@ Make it so that ethics can grant traits to a species in the same way that civics
 Give us a command that can be used in events to either remove specific ascension perks, replace a specific ascension perk with another or remove all of an empires perks. If for example the second ascension perk is removed through an event and not replaced by the same event make the third chosen ascension perk take its place. In other words if one an ascension perk goes missin make it so that the ones right after fall back to take the missing perk before it its place.
 
 
-
 33 - Reset/replace/remove traditions event command
 
 Give us a command that can be used in events to either remove specific traditions perks.
-
 
 
 34 - Drag and drop ascension perks
@@ -506,23 +504,27 @@ In stellaris you can change the default leader_age_min and -max values by either
 You can currently replace the galaxy maps included in the vanilla game by naming custom map the same as a vanilla one. What I would like to see is the ability to add new maps to the game so that they exist alongside the vanilla ones instead of replacing them.
 
 
+40 - Invisible trais on species creation menu
+
+Make it possible to add traits to a species that are invisible in the game menu but visible once the game has begun similar to the planet habitability traits.
 
 
+41 - Unstealable Relics
+
+Make it so that you can make a relic unable to be stolen through taking a capital.
 
 
+42 - x.x.* versions available in the beta option in steam
+
+Make versions like 2.2.1 or 2.3.0 available for us to choose in the version rollback in steam. Currently we can only change to the latest version of a named patch instead of all the different versions of it. Some of the launch versions of some patches contains things such as unique assets that have since been removed or altered in such a way that they are unusable for some purposes. The only way currently is to find and torrent an older version of the game for the specific version of the game that you are looking for. Lettimg us rollback to such versions would let skip that step and lets us access those versions of the game in a quicker and more exact way.
 
 
+43 - Make it possible for species traits to have a species trait as a prerequisite
+
+I want the option to make species traits that can only be chosen in the species creation menu or genetic modification if it already has a certain species trait. In other words species trait B can only be chosen if species X has species trait A.
 
 
-
-
-
-
-
-
-
-
-
+44 - 
 
 
 
