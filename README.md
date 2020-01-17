@@ -110,7 +110,6 @@ Depending on whether some features get implemented in the future (backgrounds) t
 While the game keeps getting bigger and bigger, new authorites seems to be popping up more often. What we need is a way to divide authorites into types and being able to choose how and when which authorites appear in the main species creation menu. Currently the only way to make something like this possible is to make custom ethics that take the role of buttons in this menu, but that solution just causes problems later on. We should for example have two authority buttons to switch between, one would show normal auhorities while the second would display gestalt authorities. We should also be able to mod in our own buttons and divide authorities into categories ourselves.
 
 
-
 9 - Trait folding
 
 This would be the ability for us to define instances where if a specific set of traits are on a species, you will instead of seeing both of those traits, see a new third one. For example, lets say a species has the Quick Learners trait and you genemod Intelligent onto it. When the gene edit is done, the species appears to have a new trait called Talented Learners. You should be able to define what modifiers this new folded trait would have. The folded trait should also be cosmetic and by that I mean that the species in the code is registered to still have the components of the folded trait on it, and that the new trait is just there to shorten the amount of traits or combine traits with redundant abiliies.
@@ -287,7 +286,7 @@ Would it be possible to make it for ethics in the faction menu that we have more
 
 18 - Authority trait restrictions
 
-In the authorities.txt file you can specify if an authority starts with one or more specified traits by using the "traits = {" tag. What I would to see is to be able to add conditions for these traits to appear. Such as for example if you choose a species appearance from the Arthropoid category and choose imperial authority your species gets a special hive_like trait.
+In the authorities.txt file you can specify if an authority starts with one or more specified traits by using the "traits = {" string. What I would to see is to be able to add conditions for these traits to appear. Such as for example if you choose a species appearance from the Arthropoid category and choose imperial authority your species gets a special hive_like trait.
 
 
 	traits = {
@@ -504,32 +503,59 @@ In stellaris you can change the default leader_age_min and -max values by either
 You can currently replace the galaxy maps included in the vanilla game by naming custom map the same as a vanilla one. What I would like to see is the ability to add new maps to the game so that they exist alongside the vanilla ones instead of replacing them.
 
 
-40 - Invisible trais on species creation menu
+40 - Invisible traits on species creation menu
 
 Make it possible to add traits to a species that are invisible in the game menu but visible once the game has begun similar to the planet habitability traits.
 
 
 41 - Unstealable Relics
 
-Make it so that you can make a relic unable to be stolen through taking a capital.
+Make it so that you can make a relic unable to be stolen through taking a capital. As far as I can see, relics are currently the only propert that once aquired can be activated again and again, while being connected to the empire and not a singular planet. This gives us the ability to hijack the relic system to make custom switches that can be activated if the player wants with effects different from regular relics. The only problem with this idea is that it appears that all can be stolen. Even if the chance is low and that there is only a few scenarios where they can be stolen, giving us the ability to manualy disable a relic from being stolen would remove this issue. 
 
 
 42 - x.x.* versions available in the beta option in steam
 
-Make versions like 2.2.1 or 2.3.0 available for us to choose in the version rollback in steam. Currently we can only change to the latest version of a named patch instead of all the different versions of it. Some of the launch versions of some patches contains things such as unique assets that have since been removed or altered in such a way that they are unusable for some purposes. The only way currently is to find and torrent an older version of the game for the specific version of the game that you are looking for. Lettimg us rollback to such versions would let skip that step and lets us access those versions of the game in a quicker and more exact way.
+Make versions like 2.2.1 or 2.3.0 available for us to choose in the version rollback in steam. Currently we can only change to the latest version of a named patch instead of all the different versions of it. Some of the launch versions of some patches contains things such as unique assets that have since been removed or altered in such a way that they are unusable for some purposes. The only way currently is to find and torrent an older version of the game for the specific version of the game that you are looking for. Letting us roll back to such versions would let us skip that step and lets us access those versions of the game in a quicker and more exact way.
 
 
 43 - Make it possible for species traits to have a species trait as a prerequisite
 
-I want the option to make species traits that can only be chosen in the species creation menu or genetic modification if it already has a certain species trait. In other words species trait B can only be chosen if species X has species trait A.
+Give us the option to make species traits that can only be chosen in the species creation menu or genetic modification if it already has a certain species trait. In other words species trait B can only be chosen if species X has species trait A. This is a feature that would be very important for mods that want to divide species into different categories in addtion to their archtypes and species classes. 
 
 
-44 - 
+44 - Icon Folder String
+
+In the files for features such as traits, civics, ethics or generelly all files that has to do with a images. Take a civic, by default a civic will look for an image with a matching name in the icons/governments/civics folder. If you change the location of where the matching image is located you can use the icon string to define where that image is found.
+
+
+	icon = "gfx/interface/icons/governments/civics/merchant_guilds.dds"
+
+
+What I would like to see is for us to change the default folder in which the parts in a given file would look for their default images for.
+
+
+	iconfolder = "gfx/interface/icons/governments/civics/icon_folder_test"
+
+
+Lets say I create a modded_hive_civics file in the civics folder where I place all my new modded custom Hive Mind civics. Each of those civics would then look for their matching icons in the governments/civics folder, and if I wanted them to look somewhere else I would have to add the icon = "gfx/interface/... string to each civic in that file. If this feature was included I could just add a iconfolder string at the top of the modded_hive_civics file and each of the civics in that file would then look for their icons in the new default folder for them.
 
 
 
+45 - Different ethic wheel categories
+
+While the current ethic system allows a lot of moddability there is one feature that is missing, and that is the ability to create an entirely different set of ethics that are incompatible with the default one. While we can currently add a new ethic wheel filled with new ethics, the player still has the ability to choose ethics from both these two wheels. What I would like to see is for us to disable the ability to take ethics from oposing ethic wheels. In other words give us the ability to specify which ethic wheel a certain ethic belongs too.
+
+This should work in the smae vein as how ethic categories currently work. Ethic categories are used in the game to say what ethics are part of the same pair, binding authoritarian and egalitarian together. This makes it impossible to choose both authoritarian and egalitarian at the same time, and I would like this same feature be added for custom ethic wheels.
 
 
+
+46 - Custom ship classes and custom leaders to lead them
+
+Let us make custom ships that can hold leaders, where we can also specify what leader category can use them such as entirely new leader types introduced in mods.
+
+
+
+47 - 
 
 
 
