@@ -19,8 +19,6 @@ In the readme_requirements.txt in the governments folder, there is a list of whi
 
 New values listed below:
 
-
-
 	# Authorities support:
 	#   - country_type
 	#   - ethics
@@ -73,6 +71,7 @@ New values listed below:
 	#
 
 
+Adding these new values to each of the categories would greatly increase the modability of the game and make new things possible.
 
 
 3 - Scripted images
@@ -80,17 +79,17 @@ New values listed below:
 While we currently have scripted localisation allowing us to make text that can change depending on a given condition, what I would like to see would be the same thing done with images. What I mean by this is that you could for example say the mining guilds civic showed one icon if you are democratic and a different one if you are dictatorial. That was just an example but there are lots of scenarios where I would like for certain, traits, civics and and other images to show a different image than default in a given scenario.
 
 
-
 4 - Scriptable species rights
 
 Currently we have the ability to edit already implemented species rights but we have no way of implementing our own into the game.
 
 
-
 5 - Technology feature flags
 
-Feature flags for technologies are currently hard locked to vanilla ones and new ones cannot be created, this creates some problems when dealing with special technologies that should enable or disable certain features. 
+Feature flags for technologies are currently hard locked to vanilla ones and new ones cannot be created, this creates some problems when dealing with special technologies that should enable or disable certain features. Let us be able to create our own feature flags that enable certain features.
 
+For example, the feature flag "add_advanced_traits" makes traits with the "advanced_trait = yes" string able to be shown in the trait modification window available.
+If this feature was added I could create something like a "add_very_advanced_traits" feature flag to a tech that would unlock even more advanced traits. The point being that these two sets of advanced traits would be able to be researched and aquired seperately. As of now you only have the ability to add new traits to the deafault vanilla advanced_traits feature flag.
 
 
 6 - Custom personality behaviours
@@ -98,11 +97,9 @@ Feature flags for technologies are currently hard locked to vanilla ones and new
 There are currently a bunch of personality behaviours implemented in the game that we can use as we wish, and new personalities can be created without too much trouble. The problem lies rather with influencing the behavior of personalities beyond what the game offers by default. What I would like to see is for us to be able to add in our own behaviours that we can use to make personalities more unique, as there have been multiple times where I have wanted to use them but found it unable to be changed. Take for example the robot_exploiter and the robot_liberator behaviours. Those are used to influence whether an empire give robots free will and equal rights or enslave them. One scenario I have encountered is when I implemeted a new species class called ethereals that where one could say the spiritual answer to robots in the form of psionic energy beings. What I liked to do would be to give some personalities a ethereal_exploiter = yes behaviour but since behaviours cannot be added that can't happen.
 
 
-
 7 - Zero point ethics
 
 Depending on whether some features get implemented in the future (backgrounds) this is something that I need for some things to work. This is just about wanting the ability to have an ethic cost 0 ethic points. With this ability one could create "fake" ethics that only exists in the game that show a different set of authorites in the empire creation menu depending on which was chosen. Other uses also exists.
-
 
 
 8 - A way to divide authorities into categories/groups
@@ -117,7 +114,6 @@ This would be the ability for us to define instances where if a specific set of 
 I once made a mod where I created a new ascension path, where your species ended up both Psionic and Cybernetic at the end. What I wanted was to have one Psibernetic trait listed on the species instead of Cybernetic and Psionic both being listed. The problem is that by introducing a new trait and replacing those two I would have to go back throughout the rest of the game files and edit them to now affect the new Psibernetic trait.
 
 By having a Psibernetic species that still has both the Psionic and Cybernetic traits in the code, files that deal with events related to psionic species or cybernetic species will need minimal, if any changes to their code.
-
 
 
 10 - Climate Habitability modifiers
@@ -207,7 +203,6 @@ The primary modifer does have to be set to 20 though for the total to end up at 
 All unimportant tags have been removed from these two traits to make it easier to show the important parts.
 
 
-
 11 - possible/potential tags for spritetypes and container window icons
 
 Give sprite icons like the arrows used in traditions to have possible and potential tags. This will give us the ability for arrows or other images in such menus to be able to appear and dissapear under certain conditions.
@@ -217,11 +212,9 @@ An example of this would be the ability to change which arrows appear in the tra
 Or maybe just add a arrow/image swap file where we can do this. Under condition x show file A, if else show nothing.
 
 
-
 12 - Moddable election types
 
 Currently in the game there are two distinct election types with the democratic and oligarchic types. What I would like to do, would be to modify how these two work and be able to create new ones. Maybe also be able to combine the has_heir with them to create a new election type would work correctly having both the dynastic heir attribute and the election attribute.
-
 
 
 13 - possible_secondary tag in species classes
@@ -243,24 +236,24 @@ To summarize I would for a species class to have "possible_secondary" work even 
 	playable = { has_global_flag = game_started }
 
 
-
 14 - Custom namelist useable in create_leader event 
 
 Would it possible to have the create_leader use a specified namelist when it genereates a leader. This would make it possible to let the name list be in charge of choosing a name for the leader instead of us having to clone the whole create_leader sequence for each new name we want randomize.
 
 
-
 15 - Let TRAIT_MODIFICATION_BASE_COST, TRAIT_MODIFICATION_COST_MULT and similar values be given to all species archetypes.
 
-The next few issues has to do with the NSpecies part of the defines.
+The next few issues has to do with the NSpecies part of the defines.txt file.
 
 Currently in the game all of these values are divided into two types, those used by artificial species and those used by non-artificial species. The problem lies with fact that if you try to implement a new species into the game it will have to share these values with one of those groups instead of belonging to its own.
 
-Currently in the game these values here: "TRAIT_MODIFICATION_BASE_COST", "TRAIT_CLIMATE_MODIFICATION_COST", "TRAIT_MODIFICATION_COST_MULT", "MODIFICATION_COST_MULT" are used for all species except for robots and machines which instead use: "ROBO_TRAIT_MODIFICATION_BASE_COST", "ROBO_TRAIT_MODIFICATION_COST_MULT", "ROBO_MODIFICATION_COST_MULT".
+In other words species in Stellaris are in the code either considered an artificial species ( robots, machines) or a non-artificial species ( biological, lithoid). Whenn creating a new species type you will have to choose which of those two categories the species will be considered a part of. This choice has multiple affects on how the species intereacts with features for those two species types. It is also not possible to create a third category.
+
+Currently in the game the values; "TRAIT_MODIFICATION_BASE_COST", "TRAIT_CLIMATE_MODIFICATION_COST", "TRAIT_MODIFICATION_COST_MULT", "MODIFICATION_COST_MULT" are used for all species except for robots and machines which instead use: "ROBO_TRAIT_MODIFICATION_BASE_COST", "ROBO_TRAIT_MODIFICATION_COST_MULT", "ROBO_MODIFICATION_COST_MULT".
 
 What I would like to see is these defines here being opened up a bit more and make it possible for us modders to create custom entries for these values that affect certain species. What I mean by that is that I would like for each list of these tags should affect a specific species archetype. we could thus have a BIOLOGICAL_TRAIT_MODIFICATION_BASE_COST and a LITHOID_TRAIT_MODIFICATION_BASE_COST at the same time one for species classes with the BIOLOGICAL archetype and one for species classes with the LITHOID archetype. This would make it much easier to create new species classes with specific and unique rules.
 
-The main reason for why I want this is that I have made a new buildable pop and implemented it in a mod thats called bio-constructs. These are genetically engineered lifeforms made from the bottom that has uniwue traits that make them different from standart biological species. When implemented correctly these would be an laternative to robobts and one that empires that chooses biological ascenstion to be more likely to choose. The uniwue feature of these beingsshould be that they would be a lot easier to modify the traits for. As have alsready said this isn't possible right now as they would get the standard "TRAIT_MODIFICATION_BASE_COST" value since it isn't possible create a nex exclusive one for the BIO_CONSTRUCT archetype. If i also do modify the "TRAIT_MODIFICATION_BASE_COST" it would affect both bio constructs and regular biological species something that I would like to avoid.
+The main reason for why I want this is that I have made a new buildable pop and implemented it in a mod thats called bio-constructs. These are genetically engineered lifeforms made from the bottom that has unique traits that make them different from standart biological species. When implemented correctly these would be an alternative to robots and one that empires that chooses biological ascension to be more likely to choose. The unique feature of these beings should be that they would be a lot easier to modify the traits for. This isn't possible right now as they would get the standard "TRAIT_MODIFICATION_BASE_COST" value since it isn't possible create a new exclusive one for the BIO_CONSTRUCT archetype. If I also do modify the "TRAIT_MODIFICATION_BASE_COST" it would affect both bio constructs and regular biological species something that I would like to avoid.
 
 I would also like to see a define value that defines the defualt value for changing species portraits. Such a define should also be given to name changes. Changing only the species name shouldn't take 5000 society points for example. Maybe a child define tag that give a percentage of the species modification if only the portrait or name is changed.
 
@@ -269,19 +262,16 @@ Adding these features would let modders more easily add species classes and arch
 Another feature that I would like to see implemented that has a lot to to with these things here is for us to create or own technologies that enable special features for a species. I would for example like to be able to create a new technology that enables species modification for a species instead of it defaulting to the Gene tailoring tech or the Machine Template System tech. This would make it easier to make new custom buildable species as you could gain the ability earlier or later than your ability to modify your own species and robots. I would like for this to also affect planet preferences and allow us to change the tech needed to unlock this for a speciees as well.
 
 
-
 16 - Conditional Modifiers
 
-I would like to have the ability to give conditions to the modifiers of civics and ethics.
+The ability to give conditions to the modifiers of civics and ethics thus having them grant different bonuses depending on a predefined condition.
 
 For example make it possible to code the Idealistic Foundation civic so That if you have the democratic authority it grants +5% pop happiness while if you have the oligarchic authority it grants +5% influence from factions instead. The same should also apply to ethics as well.
-
 
 
 17 - Custom ethics icons in faction menu if pop ethic following is above certain percentage
 
 Would it be possible to make it for ethics in the faction menu that we have more than 0 pops following to turn change color or use a different icon. Currently it's a bit hard to at a glance see which ethics actually have any followers. This is especisally true when you are playing with a mod that add many more ethics into the game.
-
 
 
 18 - Authority trait restrictions
@@ -299,12 +289,9 @@ In the authorities.txt file you can specify if an authority starts with one or m
 	}
 
 
-
-
 19 - Editable game files while the game is running and seeing the changes being made without restarting the game
 
 Will we ever have the ability to directly modify the files of a mod that is loaded in an open game and have the update to show the change without needing to restart the game. This would be really great to have when working on the interfaces as that is the most time consuming part of modding the game currently as one would need to restart the game and update the mod each time one changes a value.
-
 
 
 20 - Let us use AND in the civic and authority files for better restrictions
@@ -397,13 +384,11 @@ Create a NInterface tooltip define value that has to with how long after moving 
 	}
 
 
-
 22 - Value formulas
 
 The ability for use to write mathematical formulas in the code or have values be different by more than one subvalue
 
 Let us also be able to modify how values like tradition cost is calculated.
-
 
 
 23 - Resource tag question
@@ -418,7 +403,7 @@ Let us create and make our own custom planet values like ammenities with modifie
 
 25 - Editable shift_ethic command
 
-make shift_ethic customizable and let us change how it works.
+make shift_ethic customizable and let us modify how it works.
 
 
 26 - shift_ethic exclusion
@@ -435,7 +420,6 @@ If this event instead had a xenophobe exclusion tag, xenophobe would not be the 
 	}
 
 
-
 27 - Multiple origins
 
 Can it be possible to make it so that we can mod it to be possible to choose multiple origins?
@@ -443,7 +427,7 @@ Can it be possible to make it so that we can mod it to be possible to choose mul
 
 28 - Multiple "origin" systems
 
-Would it be possible to let modders "clone" the origin system and have this extra option be repurposed for giving the player more categories to choose from when designing an empire.
+Would it be possible to let modders "clone" the origin system and have this extra option be repurposed for giving the player more categories to choose from when designing an empire. This would work best like the current origin system where you get multiple choices but is only able to choose one of them. 
 
 
 29 - Decoupling species classes from ship sets
@@ -537,8 +521,7 @@ What I would like to see is for us to change the default folder in which the par
 	iconfolder = "gfx/interface/icons/governments/civics/icon_folder_test"
 
 
-Lets say I create a modded_hive_civics file in the civics folder where I place all my new modded custom Hive Mind civics. Each of those civics would then look for their matching icons in the governments/civics folder, and if I wanted them to look somewhere else I would have to add the icon = "gfx/interface/... string to each civic in that file. If this feature was included I could just add a iconfolder string at the top of the modded_hive_civics file and each of the civics in that file would then look for their icons in the new default folder for them.
-
+Lets say I create a modded_hive_civics.txt file in the civics folder where I place all my new modded custom Hive Mind civics. Each of those civics would then by default look for their matching icons in the governments/civics folder, and if I wanted them to look somewhere else I would have to add the icon = "gfx/interface/... string to each civic in that file. If this feature was included I could just add a iconfolder string at the top of the modded_hive_civics.txt file and each of the civics in that file would then look for their icons in the new default folder for them.
 
 
 45 - Different ethic wheel categories
@@ -548,14 +531,49 @@ While the current ethic system allows a lot of moddability there is one feature 
 This should work in the smae vein as how ethic categories currently work. Ethic categories are used in the game to say what ethics are part of the same pair, binding authoritarian and egalitarian together. This makes it impossible to choose both authoritarian and egalitarian at the same time, and I would like this same feature be added for custom ethic wheels.
 
 
-
 46 - Custom ship classes and custom leaders to lead them
 
 Let us make custom ships that can hold leaders, where we can also specify what leader category can use them such as entirely new leader types introduced in mods.
 
 
+47 - Temporary Trait Points
 
-47 - 
+Add a new modifier that grants temporary trait points. By this I mean a modifier that would let you get extra modification points in the species creation menu. The point is that these extra points would be temporary and would only affect the start of the game and not give the species permanent extra modification points.
+
+
+48 - Make "00_defines.txt" able to refer to custom rules in "00_rules.txt".
+
+Some of the defines set in the defines file are values that one sometimes would like to see different values for in different scenarios.
+
+Take the INTEGRATE_SUBJECT_MIN_DAYS value for example, this value has default value of 3600. This means that by default a subjected empire can only be integrated after 3600 days ( 10 years ). If you just wanted to make integration the integration timer go quicker you could easily change the value to something lower like 1800 days ( 5 years ). What is impossible is to have the value be 3600 by default but an additional factor that could chang it to 1800 via a modifier. This could be a civic, technology or something else. THe point is that it is currently impossible to make these values flexible as they are always the same for all empires.
+
+To resolve this problem, please let us redirect the default the default value input to another file where we can write the condtions. In additions the ability to make modifiers that affect these values would also be great.
+
+
+49 - Add a country_subject_integration_speed_mult modifier value
+
+There seems to exist a country_subject_integration_speed_add modifer value in the code, please add a matching country_subject_integration_speed_mult modifer value so that one can be used.
+
+
+50 - Custom Modifiers
+
+Make it possible to create new modifiers. For example let us create a custom modifier called "experience_gain_mult". This modifier would by design give equal bonuses to both "ship_experience_gain_mult" and "army_experience_gain_mult". This would mean that a "experience_gain_mult = 0.10" would be equal to a "ship_experience_gain_mult = 0.10" plus a "army_experience_gain_mult = 0.10".
+
+This feature would let us create more custom modifiers that interact with already existing modifiers without changing their names and descriptions.
+
+
+51 - Reset/replace/remove origin event command
+
+Give us a command that can be used in events to replace ones origin with another.
+
+
+52 - Rule for disabling the move of capital
+
+Make a customizable rule where one can define a scenario where a species cannot change capital. There are some scenarios where one would want an empire to be unable to change capital for lore or gameplay reasons. The lack of a way to disable capital swapping is currently making civics/origins linked to that idea hard to make.
+
+
+53 - 
+
 
 
 
