@@ -494,7 +494,7 @@ Make it possible to add traits to a species that are invisible in the game menu 
 
 41 - Unstealable Relics
 
-Make it so that you can make a relic unable to be stolen through taking a capital. As far as I can see, relics are currently the only propert that once aquired can be activated again and again, while being connected to the empire and not a singular planet. This gives us the ability to hijack the relic system to make custom switches that can be activated if the player wants with effects different from regular relics. The only problem with this idea is that it appears that all can be stolen. Even if the chance is low and that there is only a few scenarios where they can be stolen, giving us the ability to manualy disable a relic from being stolen would remove this issue. 
+Make it so that you can make a relic unable to be stolen through taking a capital. As far as I can see, relics are currently the only property that once aquired can be activated again and again, while being connected to the empire and not a singular planet. This gives us the ability to hijack the relic system to make custom switches that can be activated if the player wants with effects different from regular relics. The only problem with this idea is that it appears that all relics can be stolen. Even if the chance is low and that there is only a few scenarios where they can be stolen, giving us the ability to manualy disable a relic from being stolen would remove this issue. 
 
 
 42 - x.x.* versions available in the beta option in steam
@@ -521,7 +521,7 @@ What I would like to see is for us to change the default folder in which the par
 	iconfolder = "gfx/interface/icons/governments/civics/icon_folder_test"
 
 
-Lets say I create a modded_hive_civics.txt file in the civics folder where I place all my new modded custom Hive Mind civics. Each of those civics would then by default look for their matching icons in the governments/civics folder, and if I wanted them to look somewhere else I would have to add the icon = "gfx/interface/... string to each civic in that file. If this feature was included I could just add a iconfolder string at the top of the modded_hive_civics.txt file and each of the civics in that file would then look for their icons in the new default folder for them.
+Lets say I create a modded_hive_civics.txt file in the civics folder where I place all my new modded custom Hive Mind civics. Each of those civics would then by default look for their matching icons in the governments/civics folder, and if I wanted them to look somewhere else I would have to add the icon = "gfx/interface/..." string to each civic in that file. If this feature was included I could just add a iconfolder string at the top of the modded_hive_civics.txt file and each of the civics in that file would then look for their icons in the new default folder for them.
 
 
 45 - Different ethic wheel categories
@@ -567,13 +567,62 @@ This feature would let us create more custom modifiers that interact with alread
 Give us a command that can be used in events to replace ones origin with another.
 
 
-52 - Rule for disabling the move of capital
+52 - Game Rule for disabling the move of capital
 
-Make a customizable rule where one can define a scenario where a species cannot change capital. There are some scenarios where one would want an empire to be unable to change capital for lore or gameplay reasons. The lack of a way to disable capital swapping is currently making civics/origins linked to that idea hard to make.
+Make a customizable rule where one can define a scenario where a species cannot change capital. There are some scenarios where one would want an empire to be unable to change capital for lore or gameplay reasons. The lack of a way to disable capital swapping is currently making civics/origins linked to that idea hard to create.
 
 
-53 - 
+53 - Make swap_type work with traits
 
+With the release of the Lithoid DLC and its accompanying update a few existing features were changed to make lithoids fit in with the rest of the game. One of these changes was dividing the Devouring Swarm civic into one that fit the traditional hive mind and one that fit a lithoid one that was named Terravore. In the code however These two civics ahre the same civic slot with a new addition the swap_type string is used to define when the civic will have the traditional name and description and when to use the new Terravore one. 
+
+In the swap_type explanation found in the 00_civics.txt file it is written that it only the name and description can be changed by this trigger. ADding this feature would make it possible for us to not make seperate origins for species classes that shouldn't get the default traits or scenarios where only speific species classes should get a trait from the origin.
+
+
+	# In this scenario the civic/origin gives a trait by default if chosen, but if the trigger is activated no trait is given
+
+	civic = {
+
+		traits = {
+			trait = trait_x
+		}
+
+		swap_type = {
+
+			traits = {
+				# empty
+			}
+
+			trigger = {
+				local_human_species_class = SPECIES_CLASS
+			}
+		}
+	}
+
+or;
+
+	# In this scenario the civic/origin gives no trait by default if chosen, but if the trigger is activated the trait is given
+
+	civic = {
+
+		swap_type = {
+
+			traits = {
+				trait = trait_x
+			}
+
+			trigger = {
+				local_human_species_class = SPECIES_CLASS
+			}
+		}
+	}
+
+The rest of code for the origin/civic example has been removed to make the example easier.
+
+Either of these two options would be very useful.
+
+
+54
 
 
 
